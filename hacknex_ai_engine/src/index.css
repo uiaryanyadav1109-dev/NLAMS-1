@@ -1,0 +1,294 @@
+@import "tailwindcss";
+
+/* ────────────────────────────────────────────────────────────
+   NLAMS – TIRANGA THEME  
+   Saffron #FF9933 | White #FFFFFF | India Green #138808
+   Navy accent #003580 | Chakra Blue #0033A0
+──────────────────────────────────────────────────────────── */
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f4ef;
+    color: #1a1a2e;
+    overflow-x: hidden;
+  }
+}
+
+/* ─── CSS Custom Properties ────────────────────────────────── */
+:root {
+  --saffron:   #FF9933;
+  --saffron-d: #E07800;
+  --saffron-l: #FFB347;
+  --green:     #138808;
+  --green-d:   #0a5c04;
+  --green-l:   #1db310;
+  --white:     #FFFFFF;
+  --navy:      #003580;
+  --chakra:    #0033A0;
+  --cream:     #FFF8F0;
+  --bg-dark:   #0D1F0A;
+  --bg-mid:    #122810;
+}
+
+/* ─── Text Gradients ────────────────────────────────────────── */
+@layer utilities {
+  .text-gradient-tiranga {
+    background: linear-gradient(135deg, #FF9933 0%, #FF9933 30%, #138808 70%, #138808 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-saffron {
+    background: linear-gradient(135deg, #FF9933, #E07800, #FFB347);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-green {
+    background: linear-gradient(135deg, #138808, #0a5c04, #1db310);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-tricolor {
+    background: linear-gradient(90deg, #FF9933 0%, #FF9933 33%, #ffffff 33%, #ffffff 66%, #138808 66%, #138808 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ─── Glassmorphism variants ─ */
+  .glass {
+    background: rgba(18, 38, 16, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-card-tiranga {
+    background: rgba(18, 38, 16, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 153, 51, 0.18);
+    box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.55), 0 0 20px rgba(255, 153, 51, 0.05);
+    transition: all 0.3s ease;
+  }
+  .glass-card-tiranga:hover {
+    border-color: rgba(255, 153, 51, 0.4);
+    box-shadow: 0 16px 44px -8px rgba(0, 0, 0, 0.65), 0 0 30px rgba(255, 153, 51, 0.12);
+  }
+
+  .glass-dark {
+    background: rgba(13, 31, 10, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .glass-cream {
+    background: rgba(255, 248, 240, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 153, 51, 0.25);
+  }
+
+  .glass-saffron {
+    background: rgba(255, 153, 51, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 153, 51, 0.35);
+  }
+
+  .glass-green {
+    background: rgba(19, 136, 8, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(19, 136, 8, 0.3);
+  }
+
+  /* ─── Tiranga stripe ─ */
+  .tiranga-stripe {
+    background: linear-gradient(180deg,
+      #FF9933 0%,   #FF9933 33.3%,
+      #ffffff 33.3%,#ffffff 66.6%,
+      #138808 66.6%,#138808 100%
+    );
+  }
+
+  .tiranga-bar {
+    background: linear-gradient(90deg,
+      #FF9933 33.3%,
+      #ffffff 33.3% 66.6%,
+      #138808 66.6%
+    );
+  }
+
+  /* ─── Cards ─ */
+  .card-hover-3d {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .card-hover-3d:hover {
+    transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+    box-shadow: 0 24px 50px rgba(19,136,8,0.15), 0 0 40px rgba(255,153,51,0.1);
+  }
+
+  /* ─── Glow effects ─ */
+  .glow-saffron {
+    box-shadow: 0 0 25px rgba(255,153,51,0.5), 0 0 60px rgba(255,153,51,0.15);
+  }
+  .glow-green {
+    box-shadow: 0 0 25px rgba(19,136,8,0.5), 0 0 60px rgba(19,136,8,0.15);
+  }
+  .glow-navy {
+    box-shadow: 0 0 25px rgba(0,53,128,0.4), 0 0 60px rgba(0,51,160,0.1);
+  }
+
+  /* ─── Buttons ─ */
+  .btn-glow {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-glow::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+  }
+  .btn-glow:hover::before { left: 100%; }
+
+  /* ─── Grid pattern ─ */
+  .grid-pattern {
+    background-image:
+      linear-gradient(rgba(19,136,8,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(19,136,8,0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .grid-pattern-light {
+    background-image:
+      linear-gradient(rgba(255,153,51,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,153,51,0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* ─── Chakra spin ─ */
+  .chakra-spin {
+    animation: chakra-rotate 12s linear infinite;
+  }
+  .chakra-pulse {
+    animation: chakra-pulse-kf 3s ease-in-out infinite;
+  }
+
+  /* ─── Section backgrounds ─ */
+  .section-cream {
+    background: linear-gradient(180deg, #FFF8F0 0%, #FFF3E6 100%);
+  }
+  .section-white {
+    background: #FFFFFF;
+  }
+  .section-green-dark {
+    background: linear-gradient(135deg, #0D1F0A 0%, #122810 100%);
+  }
+  .section-saffron-light {
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFE8C8 100%);
+  }
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #FFF8F0; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF9933, #138808);
+  border-radius: 3px;
+}
+
+/* ─── Keyframes ─────────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-12px) rotate(1deg); }
+  66%       { transform: translateY(-6px)  rotate(-1deg); }
+}
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(1.08); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes chakra-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes chakra-pulse-kf {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.05); }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes flag-wave {
+  0%, 100% { transform: skewX(0deg); }
+  25%       { transform: skewX(1deg); }
+  75%       { transform: skewX(-1deg); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-float         { animation: float 6s ease-in-out infinite; }
+.animate-float-delayed { animation: float 6s ease-in-out infinite 2s; }
+.animate-float-slow    { animation: float 9s ease-in-out infinite 1s; }
+.animate-pulse-glow    { animation: pulse-glow 3s ease-in-out infinite; }
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+.animate-marquee       { animation: marquee 30s linear infinite; }
+.animate-flag-wave     { animation: flag-wave 4s ease-in-out infinite; }
+
+/* ─── Video section ─────────────────────────────────────────── */
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+}
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(13,31,10,0.5) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(13,31,10,0.3) 100%
+  );
+  pointer-events: none;
+}
+
+/* ─── Marquee (scrolling logos) ─ */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }

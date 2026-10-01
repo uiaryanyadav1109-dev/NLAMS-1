@@ -1,0 +1,1 @@
+const pool = require('../config/db');\nclass Compensation {}\nmodule.exports = Compensation;

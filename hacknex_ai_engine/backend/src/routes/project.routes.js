@@ -1,0 +1,1 @@
+const express = require('express');\nconst router = express.Router();\nconst controller = require('../controllers/project.controller');\nrouter.get('/', controller.dummy);\nmodule.exports = router;

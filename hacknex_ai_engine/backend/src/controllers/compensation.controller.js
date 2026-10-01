@@ -1,0 +1,1 @@
+const Compensation = require('../models/compensation');\nexports.dummy = (req, res) => res.json({ msg: 'compensation controller' });

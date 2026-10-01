@@ -1,0 +1,1 @@
+const Proposal = require('../models/proposal');\nexports.dummy = (req, res) => res.json({ msg: 'proposal controller' });

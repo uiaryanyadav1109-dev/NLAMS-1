@@ -1,0 +1,1 @@
+const User = require('../models/user');\nexports.dummy = (req, res) => res.json({ msg: 'user controller' });

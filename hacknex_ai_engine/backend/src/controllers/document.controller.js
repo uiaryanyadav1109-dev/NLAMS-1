@@ -1,0 +1,1 @@
+const Document = require('../models/document');\nexports.dummy = (req, res) => res.json({ msg: 'document controller' });

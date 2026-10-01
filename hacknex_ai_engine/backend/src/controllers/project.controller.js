@@ -1,0 +1,1 @@
+const Project = require('../models/project');\nexports.dummy = (req, res) => res.json({ msg: 'project controller' });

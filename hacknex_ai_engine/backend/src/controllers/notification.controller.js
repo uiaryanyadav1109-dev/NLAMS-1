@@ -1,0 +1,1 @@
+const Notification = require('../models/notification');\nexports.dummy = (req, res) => res.json({ msg: 'notification controller' });
